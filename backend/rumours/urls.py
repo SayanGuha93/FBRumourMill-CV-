@@ -1,6 +1,8 @@
 from django.urls import path
-from . import views
+from .views import RumourListCreateView, RumourDetailView
+
 
 urlpatterns = [
-    path('', views.rumours_list),
+    path("", RumourListCreateView.as_view(), name="rumour-list-create"),
+    path("<int:pk>/", RumourDetailView.as_view(), name="rumour-detail"),
 ]
