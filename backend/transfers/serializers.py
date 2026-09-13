@@ -9,12 +9,16 @@ class ClubSerializer(serializers.ModelSerializer):
 
 
 class PlayerSerializer(serializers.ModelSerializer):
+    age = serializers.IntegerField(min_value=15, max_value=50)
+
     class Meta:
         model = Player
         fields = '__all__'
 
 
 class TransferRumourSerializer(serializers.ModelSerializer):
+    probability = serializers.IntegerField(min_value=0, max_value=100)
+
     class Meta:
         model = TransferRumour
         fields = '__all__'
