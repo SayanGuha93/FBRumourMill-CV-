@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rumours',
     'rest_framework',
     'transfers',
+    'news',
 ]
 
 MIDDLEWARE = [

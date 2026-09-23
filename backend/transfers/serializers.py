@@ -17,8 +17,6 @@ class PlayerSerializer(serializers.ModelSerializer):
 
 
 class TransferRumourSerializer(serializers.ModelSerializer):
-    probability = serializers.IntegerField(min_value=0, max_value=100)
-
     class Meta:
         model = TransferRumour
         fields = '__all__'
